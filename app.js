@@ -20,8 +20,9 @@ connection.on('error', () => {
     console.log('Mongoose default connection error: ' + err)
 })
 
-// var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var developerRouter = require('./routes/developer');
 
 var app = express();
 
@@ -31,8 +32,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(`${__dirname}/client/build/`));
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/developer', developerRouter);
 
 //show react index page
 app.get('/*', (req,res) => {
