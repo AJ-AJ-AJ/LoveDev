@@ -10,4 +10,4 @@ class Developer extends Component {
     }
 }
 
-export default DeveloperAdd
+export default Developer
