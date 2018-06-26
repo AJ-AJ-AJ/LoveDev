@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import axios from 'axios'
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 import Users from './components/UsersLanding'
 import Developer from './components/DeveloperAdd'
 import HomePage from './components/HomePage'
@@ -50,4 +50,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
