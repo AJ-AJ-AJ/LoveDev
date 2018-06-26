@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
+import {Link, Switch, BrowserRouter as Router, Route} from 'react-router-dom'
+import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
 import Users from './components/Users'
 
+
 class App extends Component {
+  state={
+    users:[]
+  }
+
+  //get all of my users
+  componentDidMount(){
+    axios.get('/api/users').then(((res) => {
+      this.setState({users: res.data.users})
+    })).catch((err) => {
+      console.log(err)
+    })
+  }
+
   render() {
     return (
       <div className="App">
