@@ -4,7 +4,8 @@ import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
 import Users from './components/Users'
-
+import Developer from './components/DeveloperAdd'
+import HomePage from './components/HomePage'
 
 class App extends Component {
   state={
