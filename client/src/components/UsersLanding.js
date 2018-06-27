@@ -22,7 +22,7 @@ class Users extends Component {
 
     whenSubmit = (event) => {
         event.preventDefault()
-        axios.post('/api/users', this.state).then((res) => {
+        axios.post('/users', this.state).then((res) => {
             console.log(res.data)
             this.props.history.push(`/users/${res.data._id}`)
         })
@@ -47,7 +47,7 @@ class Users extends Component {
                     )
                 })}
                 <h2>Create New Account</h2>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.whenSubmit}>
                     <input
                         placeholder='username'
                         type='text'

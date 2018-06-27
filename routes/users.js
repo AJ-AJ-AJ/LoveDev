@@ -18,4 +18,16 @@ router.get(':/id', (req,res) => {
   }
 )})
 
+router.post('/', (req,res) => {
+  const newUser = new UsersModel(req.body)
+  newUser.save()
+  .then((user) => {
+    res.send(user)
+  })
+})
+
+router.put('/:id', async (req,res) => {
+  
+})
+
 module.exports = router;
