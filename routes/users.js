@@ -4,15 +4,18 @@ const {UsersModel} = require('../db/schema')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  UsersModel.find()
+  .then((user)=>{
+    res.send({user})
+  })
 });
 
 //send me the users
 
-// router.get(':/id', (req,res) => {
-//   UsersModel.findById(req.params.id).then((user) => {
-//     res.send({user})
-//   }
-// )})
+router.get(':/id', (req,res) => {
+  UsersModel.findById(req.params.id).then((user) => {
+    res.send({user})
+  }
+)})
 
 module.exports = router;
