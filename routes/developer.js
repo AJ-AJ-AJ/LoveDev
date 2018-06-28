@@ -4,6 +4,19 @@ const {DeveloperModel} = require('../db/schema')
 const {UsersModel} = require('../db/schema')
 
 
+//GET ALL DEVS
+router.get('/', function(req, res, next) {
+  console.log("USER PARAM", req.params.userId)
+  UsersModel.findById(req.params.userId)
+  .then((user)=>{
+    console.log("USER FROM GET ROUTE", user)
+    res.send({
+      developers: user.developers
+    })
+  })
+});
+
+
 //CRUD FOR ADDING DEVELOPER INSPIRATION
 
 //CREATE

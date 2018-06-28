@@ -14,7 +14,7 @@ class App extends Component {
 
   //get all of my users
   componentDidMount() {
-    axios.get('/api/users').then(((res) => {
+    axios.get('/users').then(((res) => {
       this.setState({ users: res.data.users })
     })).catch((err) => {
       console.log(err)

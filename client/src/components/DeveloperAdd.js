@@ -22,7 +22,7 @@ class Developer extends Component {
     }
     createDeveloper = () => {
         const userId = this.props.match.params.userId
-
+        console.log('user id', userId)
         axios.post(`/users/${userId}/developers`)
             .then((res) => {
                 this.setState({
@@ -74,6 +74,9 @@ class Developer extends Component {
             <div>
                 <h2>Welcome {this.state.user.username}! Post a new developer</h2>
                 <button onClick={this.createDeveloper}>Create</button>
+                {/* {this.state.developers.map(developer => {
+
+                })} */}
             </div>
         )
     }

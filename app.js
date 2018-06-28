@@ -34,11 +34,7 @@ app.use(express.static(`${__dirname}/client/build/`));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/developer', developerRouter);
+app.use('/users/:userId/developer', developerRouter);
 
-//show react index page
-// app.get('/*', (req,res) => {
-//     res.sendFile(`${__dirname}/client/build/index.html`)
-// })
 
 module.exports = app;
