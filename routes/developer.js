@@ -3,10 +3,6 @@ var router = express.Router();
 const {DeveloperModel} = require('../db/schema')
 const {UsersModel} = require('../db/schema')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
 
 //CRUD FOR ADDING DEVELOPER INSPIRATION
 
@@ -15,7 +11,7 @@ router.post('/', (req,res) => {
   UsersModel.findById(req.params.userId)
   .then((user) => {
     const newDeveloper = new DeveloperModel(req.body)
-    user.ideas.push(newDeveloper)
+    user.developers.push(newDeveloper)
     return user.save()
   })
   .then((savedUser) => {
@@ -26,6 +22,11 @@ router.post('/', (req,res) => {
 })
 
 //UPDATE
+router.patch('/:id', async (req,res) => {
+  const user = await UsersModel.findById(req.params.userId)
+
+  const devId = req.params.id
+})
 
 //DELETE
 

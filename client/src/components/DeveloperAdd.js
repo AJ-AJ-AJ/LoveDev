@@ -13,16 +13,17 @@ class Developer extends Component {
 
         axios.get(`/users/${userId}`)
             .then((res) => {
+                console.log('data', res.data)
                 this.setState({
                     user: res.data.user,
-                    developers: res.data.user.developers
+                    developers: res.data
                 })
             })
     }
     createDeveloper = () => {
         const userId = this.props.match.params.userId
 
-        axios.post(`/users/${userId}/ideas`)
+        axios.post(`/users/${userId}/developers`)
             .then((res) => {
                 this.setState({
                     user: res.data.user,

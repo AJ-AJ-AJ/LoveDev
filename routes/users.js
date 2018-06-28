@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
 //send me the users
 
-router.get(':/id', (req,res) => {
+router.get('/:id', (req,res) => {
   UsersModel.findById(req.params.id).then((user) => {
     res.send({user})
   }
