@@ -23,7 +23,7 @@ class Developer extends Component {
     createDeveloper = () => {
         const userId = this.props.match.params.userId
         console.log('user id', userId)
-        axios.post(`/users/${userId}/developers`)
+        axios.post(`/users/${userId}/developer`)
             .then((res) => {
                 this.setState({
                     user: res.data.user,
@@ -75,7 +75,24 @@ class Developer extends Component {
                 <h2>Welcome {this.state.user.username}! Post a new developer</h2>
                 <button onClick={this.createDeveloper}>Create</button>
                 {/* {this.state.developers.map(developer => {
+                    return(
+                        <input 
+                        type="text"
+                        name='photo'
 
+                        />
+                        <input 
+                        type="text"
+                        name='First Name'
+                        
+                        />
+                        <input 
+                        type="text"
+                        name='Last Name'
+                        
+                        />
+                        <textarea name="" id="" rows="3"/> */}
+                    {/* )
                 })} */}
             </div>
         )
