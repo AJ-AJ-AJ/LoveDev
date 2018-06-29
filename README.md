@@ -14,7 +14,7 @@ The goal of this project was to create a full stack application using the MERN s
 
   * Frameworks - Express.js, MongoDB, React.js, Node.js
   * Languages - HTML5, CSS3, JavaScript, JSX
-  * Wireframe - Google Slides
+  * Wireframe - Google Slides - [Google Slides](https://docs.google.com/presentation/d/1jbx5QgXDVRO9SJYmeNgALbtJmm9SCrstkGEfUriJf4k/edit?usp=sharing)
   * Project Planning & User Stories - [Trello](https://trello.com/b/Je319ix4/lovedev)
   * Deployment - Heroku - [Heroku](https://warm-anchorage-85727.herokuapp.com/)
   * Visual Studio Code
