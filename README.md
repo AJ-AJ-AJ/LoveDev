@@ -33,9 +33,9 @@ The goal of this project was to create a full stack application using the MERN s
 
 ![Wireframe](public/images/1.png)
 ![Wireframe](public/images/2.png)
-![Wireframe](public/images/chooseTopic.png)
-![Wireframe](public/images/articles.png)
-![Wireframe](public/images/erd.png)
+![Wireframe](public/images/3.png)
+![Wireframe](public/images/4.png)
+![Wireframe](public/images/5.png)
 
 
 ## Additions to a Future Version
