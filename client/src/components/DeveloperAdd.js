@@ -85,7 +85,7 @@ class Developer extends Component {
     render() {
         return (
             <div>
-                <h2>Welcome {this.state.user.username}! Post a new developer</h2>
+                <h2 className='postDev'>Welcome {this.state.user.username}! Post a new developer</h2>
                 <button onClick={this.deleteUser}>Delete Current User</button>
                 <button onClick={this.createDeveloper}>Create</button>
             </div>
