@@ -86,8 +86,8 @@ class Developer extends Component {
         return (
             <div>
                 <h2 className='postDev'>Welcome <span className='toBlue'>{this.state.user.username}</span>! Post a new developer</h2>
-                <button onClick={this.deleteUser}>Delete Current User</button>
-                <button onClick={this.createDeveloper}>Create</button>
+                <button onClick={this.deleteUser}>Delete Your Account</button>
+                <button onClick={this.createDeveloper}>Create A Dev</button>
             </div>
         )
     }
