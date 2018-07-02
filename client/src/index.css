@@ -26,6 +26,41 @@ img {
   height: 50%;
   width: 75%;
   border-radius: 50%;
+  box-shadow: 3px 3px 3px gray;
+}
+
+button {
+  background-color: lightblue;
+  box-shadow: 3px 3px 3px lightgray;
+  width: 150px;
+  height: 40px;
+  border: none;
+  color: white;
+  letter-spacing: 5%
+}
+
+a {
+  color: lightblue;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+input {
+  border: solid lightblue;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+}
+
+.userHeading {
+  color: lightblue;
+}
+
+.postDev {
+  color: gold;
 }
 
 .love{
