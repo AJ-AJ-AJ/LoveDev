@@ -7,7 +7,7 @@ MERN stack CRUD app that allows user to post web development inspiration
 
 ## Project Description
 
-The goal of this project was to create a full stack application using the MERN stack. LoveDev is an original idea and it is meant to be a hub for technology inspiration. Users will be able to post the developers that inspire them to their personal accounts. Users are able to create, update, and delete their posts.
+The goal of this project was to create a full stack application using the MERN stack. LoveDev is an original idea and it is meant to be a hub for technology inspiration. Users will be able to post the developers that inspire them to their personal accounts. Users are able to create, read, and delete their accounts. Users are also able to create a developer.
 
 
 ## Technologies Used
@@ -24,7 +24,6 @@ The goal of this project was to create a full stack application using the MERN s
 ## Features
  
   * Sign In/Sign Up
-  * CRUD
   * ERD Data Model
   * Flexbox
 
@@ -43,4 +42,6 @@ The goal of this project was to create a full stack application using the MERN s
 
 ## Additions to a Future Version
 
-  * TBD
+  * Fixing Bugs
+  * Adding more models
+  * Adding to the styling
