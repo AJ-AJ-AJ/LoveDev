@@ -20,6 +20,17 @@ class Developer extends Component {
                 })
             })
     }
+
+    deleteUser =() =>{
+        const userId = this.state.user._id
+        axios.delete(`/users/${userId}`)
+        .then(res => {
+            console.log('This is Working')
+            this.props.history.push('/users')
+        }) 
+    }
+
+
     createDeveloper = () => {
         const userId = this.props.match.params.userId
         console.log('user id', userId)
@@ -47,25 +58,27 @@ class Developer extends Component {
     deleteDeveloper = (devId) => {
         const userId = this.props.match.params.userId
         axios.delete(`/users/${userId}/develoeprs/${devId}`)
-        .then((res) => {
-            this.setState({
-                user: res.data.user,
-                developers: res.data.user.developers
+            .then((res) => {
+                this.setState({
+                    user: res.data.user,
+                    developers: res.data.user.developers
+                })
             })
-        })
     }
+
+
 
     processChanges = (event, devId) => {
         console.log(devId)
         const newDevs = [...this.state.developers]
-        const newDev = newDevs.find( developer => developer._id === devId)
+        const newDev = newDevs.find(developer => developer._id === devId)
         console.log(newDev)
         const inputValue = event.target.name
         const userInput = event.target.value
 
-        newDev[ inputValue ] = userInput
+        newDev[inputValue] = userInput
 
-        this.setState({ developers: newDevs})
+        this.setState({ developers: newDevs })
 
     }
 
@@ -73,30 +86,37 @@ class Developer extends Component {
         return (
             <div>
                 <h2>Welcome {this.state.user.username}! Post a new developer</h2>
+                <button onClick={this.deleteUser}>Delete Current User</button>
                 <button onClick={this.createDeveloper}>Create</button>
                 {/* {this.state.developers.map(developer => {
-                    return(
-                        <input 
+
+                    <input
                         type="text"
                         name='photo'
 
+                    />
+                        <input
+                            type="text"
+                            name='First Name'
                         />
-                        <input 
-                        type="text"
-                        name='First Name'
-                        
+                        <input
+                            type="text"
+                            name='Last Name'
+
                         />
-                        <input 
-                        type="text"
-                        name='Last Name'
-                        
-                        />
-                        <textarea name="" id="" rows="3"/> */}
-                    {/* )
-                })} */}
+                        <textarea
+                            name=""
+                            id=""
+                            rows="3"
+                        /> 
+              
+                )}
+
+                )} */}
             </div>
         )
     }
+
 }
 
 export default Developer

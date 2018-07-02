@@ -51,13 +51,18 @@ router.patch('/:id', async (req,res) => {
 })
 
 //DELETE
-router.delete('/:id', async (req,res) => {
-  const user = await UsersModel.findById(req.params.userId)
-  user.developers.id(req.params.id).remove()
-  const savedUser = await user.save()
-  res.send({
-    user: savedUser
+// router.delete('/:id', async (req,res) => {
+//   const user = await UsersModel.findById(req.params.userId)
+//   user.developers.id(req.params.id).remove()
+//   const savedUser = await user.save()
+//   res.send({
+//     user: savedUser
+//   })
+// })
+router.delete('/:id', (req,res)=>{
+  Users.findByIdAndRemove(req.params.id)
+  .then((oneUser)=>{
+    res.send('Deleted')
   })
 })
-
 module.exports = router

@@ -43,8 +43,9 @@ class Users extends Component {
                 <h2>Choose a User</h2>
                 {this.state.users.map((user) => {
                     return (
-                        <Link key={user._id} to={`/users/${user._id}`}>{user.username}</Link>
+                        <Link key={user._id} to={`/users/${user._id}`}>{user.username} <br/><br/></Link>
                     )
+                    
                 })}
                 <h2>Create New Account</h2>
                 <form onSubmit={this.whenSubmit}>

@@ -30,4 +30,11 @@ router.put('/:id', async (req,res) => {
   
 })
 
+router.delete('/:id', (req,res)=>{
+  UsersModel.findByIdAndRemove(req.params.id)
+  .then((oneUser)=>{
+    res.send('Deleted')
+  })
+})
+
 module.exports = router;
