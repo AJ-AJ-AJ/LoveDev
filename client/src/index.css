@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  border:solid red;
   display: flex;
   justify-content: space-around;
 }
@@ -17,6 +16,10 @@ div {
 
 span{
   color: gold;
+}
+
+h1,h2,h3 {
+  text-align: center;
 }
 
 .love{
@@ -31,23 +34,19 @@ span{
   margin:10px;
   text-decoration: none;
   height: 15vh;
-  border: solid;
+  color:lightblue;
 }
 
 .homeText{
   font-size:45px;
-  border: solid pink;
   height: 100vh;
   width: 100%;
-  border: solid orange;
-  justify-content: center;
 }
 
 
 .boxHolder{
   height: 40%;
   width: 100%;
-  background-color: gray;
   display: flex;
   justify-content: space-between;
 }
