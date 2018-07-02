@@ -41,14 +41,14 @@ class Users extends Component {
     render() {
         return (
             <div>
-                <h2>Choose a User</h2>
+                <h2 className="userHeading">Choose a User</h2>
                 {this.state.users.map((user) => {
                     return (
                         <Link style={{ textDecoration: 'none' }} key={user._id} to={`/users/${user._id}`}> {user.username} <br/><br/></Link>
                     )
                     
                 })}
-                <h2>Create New Account</h2>
+                <h2 className="userHeading">Create New Account</h2>
                 <form onSubmit={this.whenSubmit}>
                     <input
                         placeholder='username'
@@ -64,6 +64,7 @@ class Users extends Component {
                         value={this.state.password}
                         onChange={this.getInput}
                     />
+                    <br/>
                     <button type='submit'>Create!</button>
                     </form>
             </div>
