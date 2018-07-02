@@ -88,31 +88,6 @@ class Developer extends Component {
                 <h2>Welcome {this.state.user.username}! Post a new developer</h2>
                 <button onClick={this.deleteUser}>Delete Current User</button>
                 <button onClick={this.createDeveloper}>Create</button>
-                {/* {this.state.developers.map(developer => {
-
-                    <input
-                        type="text"
-                        name='photo'
-
-                    />
-                        <input
-                            type="text"
-                            name='First Name'
-                        />
-                        <input
-                            type="text"
-                            name='Last Name'
-
-                        />
-                        <textarea
-                            name=""
-                            id=""
-                            rows="3"
-                        /> 
-              
-                )}
-
-                )} */}
             </div>
         )
     }

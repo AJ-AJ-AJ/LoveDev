@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
+
 class Users extends Component {
     state = {
         username: '',
@@ -43,7 +44,7 @@ class Users extends Component {
                 <h2>Choose a User</h2>
                 {this.state.users.map((user) => {
                     return (
-                        <Link key={user._id} to={`/users/${user._id}`}>{user.username} <br/><br/></Link>
+                        <Link style={{ textDecoration: 'none' }} key={user._id} to={`/users/${user._id}`}> {user.username} <br/><br/></Link>
                     )
                     
                 })}
