@@ -36,7 +36,8 @@ button {
   height: 40px;
   border: none;
   color: white;
-  letter-spacing: 5%
+  font-weight: bold;
+  font-size: 13px;
 }
 
 a {
@@ -53,6 +54,10 @@ input {
   width: 200px;
   text-align: center;
   padding: 5px;
+}
+
+.toBlue{
+  color: lightblue;
 }
 
 .userHeading {
