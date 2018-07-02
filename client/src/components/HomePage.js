@@ -5,11 +5,11 @@ class HomePage extends Component {
         return (
             <div className="homeText">
                 <h1 className="love">LoveDev</h1>
-                <h3>Create <span>Share</span> Inspire </h3>
+                <h3 className="inspire">Create <span>Share</span> Inspire </h3>
 
                 <div className="boxHolder">
                     <div className="bigBox"></div>
-                    <div className="bigBox"></div>
+                    <div className="bigBox" ></div>
                     <div className="bigBox"></div>
                 </div>
 
