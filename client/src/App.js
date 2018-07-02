@@ -7,6 +7,9 @@ import Users from './components/UsersLanding'
 import Developer from './components/DeveloperAdd'
 import HomePage from './components/HomePage'
 
+
+
+
 class App extends Component {
   state = {
     users: []
@@ -32,12 +35,16 @@ class App extends Component {
       <Router>
         <div>
           <div>
-            <Link to='/'>
-              Home
+          <Link className="newLink" to='/'>
+                 Home   
+              </Link> 
+
+            
+            <Link className="newLink" to='usersLogin'>
+                Get Started 
               </Link>
-            <Link to='usersLogin'>
-              Get Started
-              </Link>
+          
+
           </div>
           <Switch>
             <Route exact path='/' component={HomePage} />
